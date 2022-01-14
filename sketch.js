@@ -183,7 +183,7 @@ function sketch(props) {
     const x = c.point[0];
     const y = c.point[1];
     const curve = fieldCurve(x, y, c.stepLen, c.stepsNum);
-    cleanedCurve = removePointsOutsideBox(0,0, fieldSize, curve);
+    const cleanedCurve = removePointsOutsideBox(0,0, fieldSize, curve);
     return {
       cleanedCurve,
       settings: c,
